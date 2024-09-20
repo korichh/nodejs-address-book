@@ -1,0 +1,56 @@
+<div class="action-box">
+    <div class="action-ui">
+        <button class="action-btn close" data-closeaction><img src="images/icons/back.svg" alt="icon back" loading="lazy" width="30" height="30"></button>
+    </div>
+    <form class="form create-form" enctype="multipart/form-data">
+        <div class="row">
+            <div class="column">
+                <label>Avatar</label>
+                <div class="input-file">
+                    <input accept=".jpg,.jpeg,.png" type="file" name="avatar" id="avatar">
+                    <label class="file" for="avatar">Upload...</label>
+                    <div class="preview">
+                        <button type="reset" aria-label="reset file input"><img src="images/icons/close.svg" alt="icon reset" loading="lazy" width="20" height="20"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="fullname" data-required>Fullname</label>
+                <input required minlength="3" type="text" name="fullname" id="fullname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="phone-number" data-required>Phone number</label>
+                <input required pattern="^(\+?38)?0\d{9}" type="text" name="phone-number" id="phone-number">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="home-address">Home address</label>
+                <input minlength="3" type="text" name="home-address" id="home-address">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="work-number">Work number</label>
+                <input pattern="^(\+?38)?0\d{9}" type="text" name="work-number" id="work-number">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="work-address">Work address</label>
+                <input minlength="3" type="text" name="work-address" id="work-address">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <label for="about">About</label>
+                <textarea minlength="3" name="about" id="about"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Add contact</button>
+    </form>
+</div>

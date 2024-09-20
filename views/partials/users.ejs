@@ -1,0 +1,26 @@
+<div class="users-inner">
+    <% if (users && users.length> 0) { %>
+    <ul class="users-list">
+        <% for (const user of users) { %>
+        <li data-id="<%= user.id %>" class="users-item user" data-openaction>
+            <button>
+                <div class="property picture">
+                    <img src="<%= `images/users/${user.avatar}` %>" alt="<%= user.fullname %>" loading="lazy" width="100" height="100">
+                </div>
+                <div data-label="Full name" class="property fullname">
+                    <span><%= user.fullname %></span>
+                </div>
+                <div data-label="Phone number" class="property number">
+                    <span><%= user.home.number %></span>
+                </div>
+                <div data-label="Address" class="property address">
+                    <span><%= user.home.address=='' ? '-' : user.home.address %></span>
+                </div>
+            </button>
+        </li>
+        <% } %>
+    </ul>
+    <% } else { %>
+    <h2>No contacts available</h2>
+    <% } %>
+</div>

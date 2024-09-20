@@ -1,0 +1,29 @@
+{
+  "name": "address-book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "hot": "nodemon . -e *",
+    "ui": "browser-sync start -p localhost:3000 --port 3001 -f public,!public/images,views --reload-delay 1 --no-ui --no-inject-changes --no-notify",
+    "dev": "npm-run-all -p hot ui"
+  },
+  "author": "korichh",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.32.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "dotenv": "^16.3.2",
+    "nodemon": "^3.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}
